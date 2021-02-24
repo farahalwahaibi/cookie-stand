@@ -67,3 +67,28 @@ td, th {
       text-align: center;
       height: 10px;
   }
+
+
+  #ADD-NEW-LOCATION {
+    width: 905px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+  }
+
+  #avarage {
+    width: 120px;
+  }
+
+  #max {
+    width: 120px;
+  }
+
+  #min {
+    width: 120px;
+  }
+
+  #name {
+    width: 200px;
+  }
+
