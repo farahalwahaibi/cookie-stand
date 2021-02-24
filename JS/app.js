@@ -434,6 +434,7 @@ formElement.addEventListener('submit', function (event) {
   city.getNumOfCookies();
   city.render();
   console.log(City.allCity);
+  document.getElementById('myTable').deleteRow(6);
   footer();
   
 });
