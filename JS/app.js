@@ -434,6 +434,7 @@ formElement.addEventListener('submit', function (event) {
   city.getNumOfCookies();
   city.render();
   console.log(City.allCity);
+  footer();
   
 });
 
@@ -456,8 +457,8 @@ const footer = function () {
 };
 
 //CALLING FOOTER FUNCTION
-footer();
 
+footer();
 
 
 
