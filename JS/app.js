@@ -438,25 +438,25 @@ formElement.addEventListener('submit', function (event) {
 });
 
 // //FOOTER FUNCTION
-// const footer = function () {
-//   const tableElement = document.getElementById('myTable');
-//   const tr = document.createElement('tr');
-//   tableElement.appendChild(tr);
-//   const th1 = document.createElement('th');
-//   tr.appendChild(th1);
-//   th1.textContent = 'Total of total';
-//   for (let i = 0; i < hours.length; i++) {
-//     const th2 = document.createElement('th');
-//     tr.appendChild(th2);
-//     th2.textContent = seattle.numOfCookiesArr[i] + tokyo.numOfCookiesArr[i] + dubai.numOfCookiesArr[i] + paris.numOfCookiesArr[i] + lima.numOfCookiesArr[i];
-//   }
-//   const th3 = document.createElement('th');
-//   tr.appendChild(th3);
-//   th3.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
-// };
+const footer = function () {
+  const tableElement = document.getElementById('myTable');
+  const tr = document.createElement('tr');
+  tableElement.appendChild(tr);
+  const th1 = document.createElement('th');
+  tr.appendChild(th1);
+  th1.textContent = 'Total of total';
+  for (let i = 0; i < hours.length; i++) {
+    const th2 = document.createElement('th');
+    tr.appendChild(th2);
+    th2.textContent = seattle.numOfCookiesArr[i] + tokyo.numOfCookiesArr[i] + dubai.numOfCookiesArr[i] + paris.numOfCookiesArr[i] + lima.numOfCookiesArr[i];
+  }
+  const th3 = document.createElement('th');
+  tr.appendChild(th3);
+  th3.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
+};
 
-// //CALLING FOOTER FUNCTION
-// footer();
+//CALLING FOOTER FUNCTION
+footer();
 
 
 
