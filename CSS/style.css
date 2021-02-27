@@ -1,4 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css?family=Abel|Oswald:700|Yellowtail|Patrick+Hand');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Oswald:wght@200;700&family=Tajawal&display=swap');
 * {
     box-sizing: border-box;
   }
@@ -9,7 +11,7 @@
       background-color: lightgray;
       
     }
-main img {
+main div {
     padding: 10px 10px;
     
 
@@ -17,16 +19,24 @@ main img {
 body h1 {
     text-align: center;
     color: rgb(14, 13, 13);
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: bolder;
 }
 main ul h1 {
     text-transform: uppercase;
     color: salmon;
     text-align: left;
-    
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
 }
 
-main ul li {
+main ul li p {
     text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    
 }
 
 footer {
@@ -44,6 +54,11 @@ footer {
 
 #SALAMON 
 
+table {
+  width: 908px;
+  margin: 0px -12px;
+}
+
 td, th {
     border: 1px solid #ccc;
     padding: 5px;
@@ -53,7 +68,16 @@ td, th {
   
   th {
     background: salmon;
-    color: #000000;
+    color: rgb(22, 22, 182);
+    font-weight: bolder;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  td {
+    font-size: initial;
+    font-family: cursive;
+    color:black;
+    font-style: italic;
   }
   
   footer {
@@ -74,6 +98,8 @@ td, th {
     padding-top: 20px;
     padding-bottom: 15px;
     text-transform: capitalize;
+    font-family: cursive;
+    font-weight: bolder;
   }
 
   #avarage {
