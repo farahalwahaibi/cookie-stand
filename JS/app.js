@@ -323,7 +323,7 @@ function City(name, min, max, avarage) {
   this.total = 0;
   this.totalPerHour = 0;
   City.allCity.push(this);
-};
+}
 
 City.allCity = [];
 
@@ -405,7 +405,7 @@ console.log(City.allCity);
 
 
 
-// Lab: 09 - Add a form to the cookie stand project 
+// Lab: 09 - Add a form to the cookie stand project
 
 // //NEW CITY RAW FUNCTION
 // const cityRaw = function () {
@@ -449,13 +449,13 @@ const footer = function () {
 
   const th3 = document.createElement('th');
   tr.appendChild(th3);
-    th3.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
+  th3.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
 };
 
 //CALLING FOOTER FUNCTION
 footer();
 
-// STEP 2 FOR LAB 09 
+// STEP 2 FOR LAB 09
 const formElement = document.getElementById('ADD-NEW-LOCATION');
 formElement.addEventListener('submit', function (event) {
   event.preventDefault();
