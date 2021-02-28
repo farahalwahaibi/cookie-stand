@@ -323,7 +323,7 @@ function City(name, min, max, avarage) {
   this.total = 0;
   this.totalPerHour = 0;
   City.allCity.push(this);
-};
+}
 
 City.allCity = [];
 
@@ -405,7 +405,7 @@ console.log(City.allCity);
 
 
 
-// Lab: 09 - Add a form to the cookie stand project 
+// Lab: 09 - Add a form to the cookie stand project
 
 // //NEW CITY RAW FUNCTION
 // const cityRaw = function () {
@@ -445,17 +445,26 @@ const footer = function () {
     th2.textContent = totalCookies;
 
     //   th2.textContent = seattle.numOfCookiesArr[i] + tokyo.numOfCookiesArr[i] + dubai.numOfCookiesArr[i] + paris.numOfCookiesArr[i] + lima.numOfCookiesArr[i];
+
   }
 
+  // for (let i = 0; i < hours.length; i++) {
   const th3 = document.createElement('th');
   tr.appendChild(th3);
-    th3.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
+  let totalOfTotal = 0;
+  for (let g = 0; g < City.allCity.length; g++) {
+    totalOfTotal += City.allCity[g].total;
+  }
+
+  th3.textContent = totalOfTotal;
+  // }
+  console.log(City.allCity);
 };
 
 //CALLING FOOTER FUNCTION
 footer();
 
-// STEP 2 FOR LAB 09 
+// STEP 2 FOR LAB 09
 const formElement = document.getElementById('ADD-NEW-LOCATION');
 formElement.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -465,18 +474,22 @@ formElement.addEventListener('submit', function (event) {
   const maxNumOfCustomers = event.target.max.value;
   const avarage = event.target.avarage.value;
 
-  document.getElementById('myTable').removeChild(document.getElementById('myTable').lastChild);
-  const city = new City(cityName, minNumOfCustomers, maxNumOfCustomers, avarage);
+  if (minNumOfCustomers >= maxNumOfCustomers) {
+    alert('please make the Max.Num Of Customers value greater than the Min.Num Of Customers');
+    console.log(alert);
+  } else {
 
-  formElement.reset();
+    document.getElementById('myTable').removeChild(document.getElementById('myTable').lastChild);
+    const city = new City(cityName, minNumOfCustomers, maxNumOfCustomers, avarage);
 
-  city.getNumOfCookies();
-  city.render();
-  console.log(City.allCity);
+    formElement.reset();
 
+    city.getNumOfCookies();
+    city.render();
+    console.log(City.allCity);
+    footer();
+  }
   // tableElement.removeLastChild
-  footer();
-
 });
 
 
