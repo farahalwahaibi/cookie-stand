@@ -447,9 +447,17 @@ const footer = function () {
     //   th2.textContent = seattle.numOfCookiesArr[i] + tokyo.numOfCookiesArr[i] + dubai.numOfCookiesArr[i] + paris.numOfCookiesArr[i] + lima.numOfCookiesArr[i];
   }
 
+  // for (let i = 0; i < hours.length; i++) {
   const th3 = document.createElement('th');
   tr.appendChild(th3);
-  th3.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
+  let totalOfTotal = 0;
+  for (let g = 0; g < City.allCity.length; g++) {
+    totalOfTotal += City.allCity[g].total;
+  }
+
+  th3.textContent = totalOfTotal;
+  // }
+  console.log(City.allCity);
 };
 
 //CALLING FOOTER FUNCTION
@@ -465,18 +473,22 @@ formElement.addEventListener('submit', function (event) {
   const maxNumOfCustomers = event.target.max.value;
   const avarage = event.target.avarage.value;
 
-  document.getElementById('myTable').removeChild(document.getElementById('myTable').lastChild);
-  const city = new City(cityName, minNumOfCustomers, maxNumOfCustomers, avarage);
+  // PREVENT MIN VALUE TO BE GREATER THAN MAX VALUE 
+  if (minNumOfCustomers >= maxNumOfCustomers) {
+    alert('please make the Max.Num Of Customers value greater than the Min.Num Of Customers');
+    console.log(alert);
+  }
+  else {
+    document.getElementById('myTable').removeChild(document.getElementById('myTable').lastChild);
+    const city = new City(cityName, minNumOfCustomers, maxNumOfCustomers, avarage);
 
-  formElement.reset();
+    formElement.reset();
 
-  city.getNumOfCookies();
-  city.render();
-  console.log(City.allCity);
-
-  // tableElement.removeLastChild
-  footer();
-
+    city.getNumOfCookies();
+    city.render();
+    console.log(City.allCity);
+    footer();
+  }
 });
 
 
