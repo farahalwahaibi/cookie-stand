@@ -474,11 +474,7 @@ formElement.addEventListener('submit', function (event) {
   const avarage = event.target.avarage.value;
 
   // PREVENT MIN VALUE TO BE GREATER THAN MAX VALUE 
-  if (minNumOfCustomers >= maxNumOfCustomers) {
-    alert('please make the Max.Num Of Customers value greater than the Min.Num Of Customers');
-    console.log(alert);
-  }
-  else {
+  if (Number(maxNumOfCustomers) > Number(minNumOfCustomers)) {
     document.getElementById('myTable').removeChild(document.getElementById('myTable').lastChild);
     const city = new City(cityName, minNumOfCustomers, maxNumOfCustomers, avarage);
 
@@ -489,9 +485,11 @@ formElement.addEventListener('submit', function (event) {
     console.log(City.allCity);
     footer();
   }
+  else {
+    alert('please make the Max.Num Of Customers value greater than the Min.Num Of Customers value');
+    console.log(alert);
+  }
 });
-
-
 
 
 
